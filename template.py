@@ -48,17 +48,17 @@ def main_func():
 
     # data is Excel sheet that will be read. Do the further processing below in this function. 
     
-    url = "https://www.fast2sms.com/dev/bulk"
-    sender_id='enter your company name'
+    # url = "https://www.fast2sms.com/dev/bulk"
+    # sender_id='enter your company name'
     
-    for i in range(len(data)):
-        message='your quantity is'+ str(data['QUANTITY(MT)'][i])
-        phone_number=(data['MOBILE NO'][i])
-        payload = "sender_id="+sender_id+" &message="+message+" &language=english&route=p&numbers="+phone_number
-        headers = {'authorization': "",
-                   'Content-Type': "application/x-www-form-urlencoded",
-                   'Cache-Control': "no-cache"}
-        response = requests.request("POST", url, data=payload, headers=headers)
+    # for i in range(len(data)):
+    #     message='your quantity is'+ str(data['QUANTITY(MT)'][i])
+    #     phone_number=(data['MOBILE NO'][i])
+    #     payload = "sender_id="+sender_id+" &message="+message+" &language=english&route=p&numbers="+phone_number
+    #     headers = {'authorization': "",
+    #                'Content-Type': "application/x-www-form-urlencoded",
+    #                'Cache-Control': "no-cache"}
+    #     response = requests.request("POST", url, data=payload, headers=headers)
     
 
 
@@ -94,4 +94,4 @@ my_btn = tk.Button(master, text = 'Open File', command = open).grid(row = 0, col
 my_btn2 = tk.Button(master, text = 'Run', command = main_func).grid(row = 1, column = 1, sticky=tk.W, pady=6)
 
 
-tk.mainloop()
+master.mainloop()
